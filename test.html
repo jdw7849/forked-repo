@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>AJAX GET Request Example</h1>
+    <button id="fetchData">Fetch Data</button>
+    <div id="dataContainer">Data will appear here.</div>
+
+    <script>
+        $(document).ready(function() {
+            $("#fetchData").click(function() {
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/posts/1',
+                    type: 'GET',
+                    success: function(data) {
+                        $("#dataContainer").html('<h2>' + data.title + '</h2><p>' + data.body + '</p>');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Request failed:", error);
+                        $("#dataContainer").text("An error occurred while fetching data.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
