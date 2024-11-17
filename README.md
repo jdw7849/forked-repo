@@ -9,7 +9,7 @@ A simple web application for monitoring air quality, showing real-time data and 
 - **Single Page Application (SPA)**: Smooth navigation without page reloads.
 - **Responsive Design**: Works well on both desktop and mobile devices.
 
-## 🛠Technologies Used
+## Technologies Used
 
 - **HTML, CSS, JavaScript**
 - **Chart.js** for visualizations
