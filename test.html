@@ -2,30 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AJAX Example</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>AJAX GET Request Example</h1>
-    <button id="fetchData">Fetch Data</button>
-    <div id="dataContainer">Data will appear here.</div>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="logo">
+            <h2>AirMonitor</h2>
+        </div>
+        <ul>
+            <li><a href="#" id="home-link" class="active">Home</a></li>
+            <li><a href="#" id="data-link">Data</a></li>
+            <li><a href="#" id="about-link">About</a></li>
+        </ul>
+    </div>
 
-    <script>
-        $(document).ready(function() {
-            $("#fetchData").click(function() {
-                $.ajax({
-                    url: 'https://jsonplaceholder.typicode.com/posts/1',
-                    type: 'GET',
-                    success: function(data) {
-                        $("#dataContainer").html('<h2>' + data.title + '</h2><p>' + data.body + '</p>');
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Request failed:", error);
-                        $("#dataContainer").text("An error occurred while fetching data.");
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header -->
+        <header>
+            <h1>Air Quality Monitoring Dashboard</h1>
+        </header>
+
+        <!-- Data Cards Section -->
+        <section id="data-cards">
+            <div class="card">
+                <h3>Temperature</h3>
+                <p><span id="temperature">25</span> °C</p>
+            </div>
+            <div class="card">
+                <h3>Humidity</h3>
+                <p><span id="humidity">60</span> %</p>
+            </div>
+            <div class="card">
+                <h3>PM2.5</h3>
+                <p><span id="pm25">35</span> μg/m³</p>
+            </div>
+            <div class="card">
+                <h3>PM10</h3>
+                <p><span id="pm10">40</span> μg/m³</p>
+            </div>
+            <div class="card">
+                <h3>NOx</h3>
+                <p><span id="nox">15</span> ppb</p>
+            </div>
+            <div class="card">
+                <h3>NH3</h3>
+                <p><span id="nh3">8</span> ppb</p>
+            </div>
+            <div class="card">
+                <h3>CO2</h3>
+                <p><span id="co2">400</span> ppm</p>
+            </div>
+            <div class="card">
+                <h3>SO2</h3>
+                <p><span id="so2">5</span> ppb</p>
+            </div>
+            <div class="card">
+                <h3>VOC</h3>
+                <p><span id="voc">20</span> ppb</p>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section id="charts">
+            <div class="chart-container">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="doughnutChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-3">
+            <p>&copy; 2024 Air Quality Monitoring. All Rights Reserved.</p>
+            <a href="https://www.data.go.kr/iim/api/selectAPIAcountView.do">External Resources</a>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    background-color: #f0f0f5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+#sidebar {
+    width: 250px;
+    background: linear-gradient(45deg, #6a5acd, #836fff);
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin: 20px 0;
+}
+
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#sidebar ul li a.active {
+    font-weight: bold;
+}
+
+#main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#data-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.card {
+    width: 170px;
+    padding: 15px;
+    background: #836fff;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+}
+
+.card h3 {
+    font-size: 16px;
+}
+
+#charts {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #6a5acd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
