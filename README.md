@@ -21,10 +21,10 @@ A simple web application for monitoring air quality, showing real-time data and 
    ```bash
    git clone https://github.com/jdw7849/forked-repo.git
 
-2. Open test.html in your browser.
+2. Open main.html in your browser.
 
 ## Project Files
-index.html: Main page structure
+main.html: Main page structure
 styles.css: Styling
 script.js: JavaScript for data updates and navigation
 
